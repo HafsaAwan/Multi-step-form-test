@@ -1,0 +1,38 @@
+{% extends "_layout.html" %}
+
+{% block header%}
+
+{% endblock %}
+{% block content %}
+    <div class="card">
+        <h5 class="card-header">Sign Up</h5>
+        <div class="card-body">
+          <h5 class="card-title">Account Information</h5>
+          <p class="card-text">
+            <form action="{{ url_for('users.form2') }}" method="post">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+              
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name ="username" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type='text' name='email' class="form-control" />
+              </div>
+              
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" required data-eye>
+              </div>
+ 
+                <input class="btn btn-primary" type="submit" value="Next">
+              </form>
+          </p>
+         
+        </div>
+      </div>
+
+
+      
+  {% endblock %}

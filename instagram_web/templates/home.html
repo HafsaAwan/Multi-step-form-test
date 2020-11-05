@@ -8,5 +8,15 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Homepage</h1>
+  <h1>Welcome!</h1>
+
+  <div class="card">
+    <h5 class="card-header">Profile App</h5>
+    <div class="card-body">
+      <a href="{{url_for('users.form1')}}" class="btn btn-primary">Sign Up!</a>
+      <a href="{{url_for('facebook_login')}}" class="btn btn-primary">Sign In With facebook</a>
+    </div>
+  </div>
+
+
 {% endblock %}

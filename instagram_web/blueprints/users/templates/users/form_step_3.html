@@ -1,0 +1,55 @@
+{% extends "_layout.html" %}
+
+{% block title %}
+  Homepage
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Thank you!</h1>
+    <p class="lead"><h3>We will contact you soon!</h3></p>
+    
+    <hr class="my-4">
+    <p>
+      <h3>Your details:</h3>
+      <table class="table table-sm">
+
+        <tbody>
+          <tr>
+            <th scope="row">Username:</th>
+            <td>{{user.username}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email:</th>
+            <td>{{user.email}}</td>
+          </tr>
+          <tr>
+            <th scope="row">First Name:</th>
+            <td>{{user.first_name}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Last Name:</th>
+            <td>{{user.last_name}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Address:</th>
+            <td>{{user.address}}</td>
+          </tr>
+          <tr>
+            <th scope="row">City:</th>
+            <td>{{user.city}}</td>
+          </tr>
+          <tr>
+            <th scope="row">State:</th>
+            <td>{{user.state}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </p>
+  </div>
+
+
+{% endblock %} 
